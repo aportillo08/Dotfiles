@@ -1,0 +1,51 @@
+window#osd {
+    border-radius: 999px;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+
+    #container {
+        margin: 16px;
+    }
+
+    image,
+    label {
+        color: transparent;
+    }
+
+    progressbar:disabled,
+    image:disabled {
+        opacity: 0.5;
+    }
+
+    progressbar,
+    segmentedprogress {
+        min-height: 6px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.6);
+        border: none;
+    }
+
+    trough,
+    segment {
+        min-height: inherit;
+        border-radius: inherit;
+        border: none;
+        background: rgba(255,255,255,0.6);
+    }
+
+    progress,
+    segment.active {
+        min-height: inherit;
+        border-radius: inherit;
+        border: none;
+        background: rgba(255,255,255,0.6);
+    }
+
+    segment {
+        margin-left: 8px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
