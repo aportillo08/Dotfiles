@@ -1,0 +1,325 @@
+* {
+  all: unset;
+  font-size: 25px;
+  font-family: "Cascadia Code Italic", serif;
+  transition: 600ms;
+}
+
+trough highlight {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+scale {
+  margin: 0 7px;
+}
+
+scale trough {
+  margin: 0rem 1rem;
+  min-height: 8px;
+  min-width: 170px;
+  border-radius: 30px;
+}
+
+trough slider {
+  margin: -10px;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+trough {
+  background-color: #313244;
+}
+
+/* notifications */
+.notification-background {
+  border-radius: 30px;
+  margin: 18px;
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0;
+}
+
+.notification-background .notification {
+  padding: 7px;
+  border-radius: 30px;
+}
+
+.notification-background .notification.critical {
+  box-shadow: inset 0 0 7px 0 #f38ba8;
+}
+
+.notification .notification-content {
+  margin: 7px;
+}
+
+.notification .notification-content overlay {
+  /* icons */
+  margin: 4px;
+}
+
+.notification-content .summary {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.notification-content .time {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.notification-content .body {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.notification > *:last-child > * {
+  min-height: 3.4em;
+}
+
+.notification-background .close-button {
+  margin: 7px;
+  padding: 2px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #ff1919;
+}
+
+.notification-background .close-button:hover {
+  background-color: #ff1919;
+}
+
+.notification-background .close-button:active {
+  background-color: #ff0800;
+}
+
+.notification .notification-action {
+  border-radius: 30px;
+  color: rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 0 0 1px #45475a;
+  margin: 4px;
+  padding: 8px;
+  font-size: 0.2rem; /* controls the button size not text size*/
+}
+
+.notification .notification-action {
+  background-color: #313244;
+}
+
+.notification .notification-action:hover {
+  background-color: #45475a;
+}
+
+.notification .notification-action:active {
+  background-color: #585b70;
+}
+
+.notification.critical progress {
+  background-color: #ff0800;
+}
+
+.notification.low progress,
+.notification.normal progress {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.notification progress,
+.notification trough,
+.notification progressbar {
+  border-radius: 0px;
+  padding: 3px 0;
+}
+
+/* control center */
+.control-center {
+  border-radius: 0px;
+  background-color: rgba(0, 0, 0, 0.498);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 14px;
+}
+
+.control-center .notification-background {
+  border-radius: 30px;
+  margin: 4px 10px;
+}
+
+.control-center .notification-background .notification {
+  border-radius: 0px;
+}
+
+.control-center .notification-background .notification.low {
+  opacity: 0;
+}
+
+.control-center .widget-title > label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.3em;
+}
+
+.control-center .widget-title button {
+  border-radius: 10px;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 8px;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+.control-center .widget-title button:hover {
+  background-color: #45475a;
+  color: rgba(0, 0, 0, 0.8);
+  transition: all 0.5s ease;
+}
+
+.control-center .widget-title button:active {
+  background-color: #585b70;
+}
+
+.control-center .notification-group {
+  margin-top: 10px;
+}
+
+.control-center .notification-group:focus .notification-background {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+scrollbar slider {
+  margin: -3px;
+  opacity: 0;
+}
+
+scrollbar trough {
+  margin: 2px 0;
+}
+
+/* dnd */
+.widget-dnd {
+  margin-top: 5px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.widget-dnd > switch {
+  font-size: initial;
+  border-radius: 30px;
+  background: #313244;
+  box-shadow: none;
+}
+
+.widget-dnd > switch:checked {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.widget-dnd > switch slider {
+  background: #45475a;
+  border-radius: 8px;
+}
+
+/* mpris */
+.widget-mpris-player {
+  background: #313244;
+  border-radius: 30px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mpris-overlay {
+  background-color: #313244;
+  opacity: 0.9;
+  padding: 15px 10px;
+}
+
+.widget-mpris-album-art {
+  -gtk-icon-size: 100px;
+  border-radius: 30px;
+  margin: 0 10px;
+}
+
+.widget-mpris-title {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.widget-mpris-subtitle {
+  font-size: 1rem;
+  color: #bac2de;
+}
+
+.widget-mpris button {
+  border-radius: 12.6px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 5px;
+  padding: 2px;
+}
+
+.widget-mpris button image {
+  -gtk-icon-size: 1.8rem;
+}
+
+.widget-mpris button:hover {
+  background-color: #313244;
+}
+
+.widget-mpris button:active {
+  background-color: #45475a;
+}
+
+.widget-mpris button:disabled {
+  opacity: 0.5;
+}
+
+.widget-menubar > box > .menu-button-bar > button > label {
+  font-size: 3rem;
+  padding: 0.5rem 2rem;
+}
+
+.widget-menubar > box > .menu-button-bar > :last-child {
+  color: #f38ba8;
+}
+
+.power-buttons button:hover,
+.powermode-buttons button:hover,
+.screenshot-buttons button:hover {
+  background: #313244;
+}
+
+.control-center .widget-label > label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 2rem;
+}
+
+.widget-buttons-grid {
+  padding-top: 1rem;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button label {
+  font-size: 2.5rem;
+}
+
+.widget-volume {
+  padding: 1rem 0;
+}
+
+.widget-volume label {
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0 1rem;
+}
+
+.widget-volume trough highlight {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.widget-backlight trough highlight {
+  background: #f9e2af;
+}
+
+.widget-backlight label {
+  font-size: 1.5rem;
+  color: #f9e2af;
+}
+
+.widget-backlight .KB {
+  padding-bottom: 1rem;
+}
+
+.image {
+  padding-right: 0.5rem;
+  opacity: 0;
+  background: transparent;
+}
