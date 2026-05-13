@@ -1,0 +1,325 @@
+* {
+    font-family: "Cascadia Code Italic", serif;
+    font-size: 30px;
+    font-weight: bold;
+    -gtk-icon-shadow: none;
+}
+
+window#waybar {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition-property: background-color;
+    transition-duration: .5s;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+}
+
+#modules-left,
+#modules-right,
+#modules-center {
+    padding: 10px 10px;
+    margin: 3px;
+}
+
+#workspaces button {
+    padding: 0 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    border: 3px solid #898a8a;
+    margin: 3px;
+    animation: gradient_f 20s linear infinite;
+    transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+#workspaces {
+    transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1.5);
+    padding: 0 5px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+    margin: 3px;
+}
+
+#workspaces button.active {
+    color: transparent;
+    min-width: 50px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    animation: gradient_f 20s linear infinite;
+    border-radius: 50px;
+    transition: all 1s cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+#workspaces button.active:hover {
+    background: rgb(255, 255, 255);
+    transition: all 0.5s ease;
+}
+
+#workspaces button.urgent {
+    color: transparent;
+    min-width: 50px;
+    background-color: rgba(255, 0, 0, 0.502);
+    animation: gradient_f 20s linear infinite;
+    border-radius: 50px;
+    transition: all 1s cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+#pulseaudio {
+    padding: 0 15px 0 15px;
+    margin: 3px;
+    margin-left: -35px;
+    border-radius: 50px;
+    background-color: rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0.6);
+    border: none;
+}
+
+#pulseaudio label {
+    background: transparent;
+    font-size: 45px;
+    background-color: transparent;
+    padding: 0px 15px 0px 15px;
+    margin: 0;
+}
+
+#pulseaudio-slider slider {
+    min-width: 0px;
+    opacity: 0;
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+#pulseaudio-slider trough {
+    min-height: 20px;
+    min-width: 80px;
+    border-radius: 50px;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+}
+
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+#pulseaudio-slider:hover highlight {
+    background: rgb(255, 255, 255);
+    transition: all 0.5s ease;
+}
+
+#backlight {
+    padding: 0px 68px 0px 15px;
+    margin: 3px;
+    margin-right: -35px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.6);
+    border: none;
+}
+
+#backlight label {
+    background: transparent;
+    font-size: 40px;
+    background-color: transparent;
+    padding: 0px 15px 0px 15px;
+    margin: 0;
+}
+
+#backlight-slider slider {
+    min-width: 0px;
+    opacity: 0;
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+#backlight-slider trough {
+    min-height: 20px;
+    min-width: 80px;
+    border-radius: 50px;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#backlight-slider highlight {
+    min-width: 10px;
+    border-radius: 50px;
+    background:rgba(255, 255, 255, 0.6);
+    transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+#backlight-slider:hover highlight {
+    background: rgb(255, 255, 255);
+    transition: all 0.5s ease;
+}
+
+#clock {
+    padding: 0 20px 0 20px;
+    margin: 0 4px;
+    border-radius: 50px;
+    font-size: 35px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#cpu {
+    padding: 0 25px 0 15px;
+    margin: 3px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.6);
+    border: none;
+}
+
+#cpu label {
+    background: transparent;
+    background-color: transparent;
+    padding: 0px 15px 0px 15px;
+    margin: 0;
+}
+
+#memory {
+    padding: 0px 68px 0px 15px;
+    margin: 3px;
+    margin-right: -35px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.6);
+    border: none;
+}
+
+#memory label {
+    background: transparent;
+    background-color: transparent;
+    padding: 0px 15px 0px 15px;
+    margin: 0;
+}
+
+#temperature {
+    padding: 0 25px 0 15px;
+    margin: 3px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    color:rgba(255, 255, 255, 0.6);
+    border: none;
+}
+
+#temperature label {
+    background: transparent;
+    background-color: transparent;
+    padding: 0px 15px 0px 15px;
+    margin: 0;
+}
+
+#disk {
+    padding: 0px 68px 0px 15px;
+    margin: 3px;
+    margin-right: -35px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.6);
+    border: none;
+}
+
+#disk label {
+    background: transparent;
+    background-color: transparent;
+    padding: 0px 15px 0px 15px;
+    margin: 0;
+}
+
+#tray {
+    padding: 0 15px;
+    margin: 5px;
+    font-size: 45px;
+}
+
+#privacy {
+    padding: 0 15px;
+    margin: 3px;
+    border-radius: 50px;
+    font-size: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 1s cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+#privacy:hover {
+    background: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.8);
+    transition: all 0.5s ease;
+}
+
+#language {
+    padding: 0 25px 0 20px;
+    margin: 3px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 1s cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+#language:hover {
+    background-color: rgb(255, 255, 255);
+    transition: all 0.6s ease;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#power-profiles-daemon {
+    padding: 0px 45px 0 45px;
+    margin: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 35px;
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+#power-profiles-daemon:hover {
+    background: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.8);
+    transition: all 0.5s ease;
+}
+
+#custom-power {
+    padding: 0px 20px 0 20px;
+    margin: 3px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 45px;
+    border-radius: 50px;
+    transition: all 1s cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+#custom-power:hover {
+    background-color: rgba(255, 0, 0, 0.502);
+    transition: all 0.6s ease;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#custom-swaync {
+    padding: 0px 5px 0px 5px;
+    margin: 3px;
+    font-size: 45px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#battery {
+    padding: 0 15px;
+    margin: 5px;
+    border-radius: 30px;
+    background-color: #898a8a;
+    color: black;
+}
+
+#battery.charging {
+    padding: 0 15px;
+    margin: 5px;
+    border-radius: 30px;
+    background-color: #898a8a;
+    color: black;
+}
